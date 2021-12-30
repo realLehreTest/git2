@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Space Tourism Website | realLehre</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_main">
+        <div class="header_logo">
+          <a href="index.html"><img src="./img/shared/logo.svg" alt="" /></a>
+        </div>
+
+        <div class="menu-btn">
+          <span class="burger"></span>
+        </div>
+        <div class="header_links">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="index.html"><span class="nav-index">00</span>HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="destination.html"
+                ><span class="nav-index">01</span>DESTINATION</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="crew.html"><span class="nav-index">02</span>CREW</a>
+            </li>
+            <li class="nav-item active">
+              <a href="technology.html"
+                ><span class="nav-index">03</span>TECHNOLOGY</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="major">
+      <section class="technology">
+        <div class="technology-container">
+          <div class="tech-sub-heading">
+            <p><span id="tech-page-index">03</span>SPACE LAUNCH 101</p>
+          </div>
+
+          <div class="tech-main active-tech-main" data-tab="1">
+            <div class="tech-main-details">
+              <div class="tech-details-indices">
+                <button
+                  class="details-index active-tech-btn"
+                  type="button"
+                  data-for-id="1"
+                >
+                  1
+                </button>
+                <button class="details-index" type="button" data-for-id="2">
+                  2
+                </button>
+                <button class="details-index" type="button" data-for-id="3">
+                  3
+                </button>
+              </div>
+
+              <div class="tech-details-contents">
+                <p id="terminology">THE TERMINOLOGY...</p>
+                <p id="vessel">LAUNCH VEHICLE</p>
+                <p id="tech-main-content">
+                  A launch vehicle or carrier rocket is a rocket-propelled
+                  vehicle used to carry a payload from Earth's surface to space,
+                  usually to Earth orbit or beyond. Our WEB-X carrier rocket is
+                  the most powerful in operation. Standing 150 metres tall, it's
+                  quite an awe-inspiring sight on the launch pad!
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-img">
+              <img
+                src="/dist/img/technology/image-launch-vehicle-portrait.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="tech-main" data-tab="2">
+            <div class="tech-main-details">
+              <div class="tech-details-indices">
+                <button class="details-index" type="button" data-for-id="1">
+                  1
+                </button>
+                <button
+                  class="details-index active-tech-btn"
+                  type="button"
+                  data-for-id="2"
+                >
+                  2
+                </button>
+                <button class="details-index" type="button" data-for-id="3">
+                  3
+                </button>
+              </div>
+
+              <div class="tech-details-contents">
+                <p id="terminology">THE TERMINOLOGY...</p>
+                <p id="vessel">SPACEPORT</p>
+                <p id="tech-main-content">
+                  A spaceport or cosmodrome is a site for launching (or
+                  receiving) spacecraft, by analogy to the seaport for ships or
+                  airport for aircraft. Based in the famous Cape Canaveral, our
+                  spaceport is ideally situated to take advantage of the Earth’s
+                  rotation for launch.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-img">
+              <img
+                src="/dist/img/technology/image-spaceport-portrait.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="tech-main" data-tab="3">
+            <div class="tech-main-details">
+              <div class="tech-details-indices">
+                <button class="details-index" type="button" data-for-id="1">
+                  1
+                </button>
+                <button class="details-index" type="button" data-for-id="2">
+                  2
+                </button>
+                <button
+                  class="details-index active-tech-btn"
+                  type="button"
+                  data-for-id="3"
+                >
+                  3
+                </button>
+              </div>
+
+              <div class="tech-details-contents">
+                <p id="terminology">THE TERMINOLOGY...</p>
+                <p id="vessel">SPACE CAPSULE</p>
+                <p id="tech-main-content">
+                  A space capsule is an often-crewed spacecraft that uses a
+                  blunt-body reentry capsule to reenter the Earth's atmosphere
+                  without wings. Our capsule is where you'll spend your time
+                  during the flight. It includes a space gym, cinema, and plenty
+                  of other activities to keep you entertained.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-img">
+              <img
+                src="/dist/img/technology/image-space-capsule-portrait.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/web.js"></script>
+    <script src="js/technology.js"></script>
+  </body>
+</html>
