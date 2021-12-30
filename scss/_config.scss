@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+$dark-color: #0b0d17;
+$fog-color: #d0d6f9;
+$white-color: #ffffff;
+$font-sizes: (
+  "heading-1": 150px,
+  "heading-2": 100px,
+  "heading-3": 58px,
+  "heading-4": 32px,
+  "heading-5": 28px,
+  "sub-heading-1": 28px,
+  "sub-heading-2": 14px,
+  "nav-texts": 16px,
+  "content-texts": 18px,
+  "mobile-heading": 80px,
+  "mobile-sub-heading": 16px,
+  "mobile-content-texts": 15px,
+);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $white-color;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin mainFont {
+  font-family: "Bellefair", serif;
+}
+
+@mixin secondaryFont {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin animate($animation, $duration, $method) {
+  animation: $animation $duration $method;
+}
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin low-res-laptops-tablets {
+  @media screen and (max-width: 961px) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: 641px) {
+    @content;
+  }
+}
+@mixin large-smartphones {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin small-smartphones {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}

@@ -1,0 +1,117 @@
+.technology {
+  background: url("/dist/img/technology/background-technology-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.technology-container {
+  max-width: 1121px;
+  padding-left: 20px;
+  margin-left: auto;
+  @include secondaryFont;
+
+  & .tech-sub-heading {
+    & p {
+      color: $white-color;
+      font-size: map-get($font-sizes, sub-heading-1);
+      letter-spacing: 4.72px;
+
+      & #tech-page-index {
+        color: $fog-color;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  & .tech-main {
+    @include flexCenter(row);
+    display: none;
+
+    &.active-tech-main {
+      @include flexCenter(row);
+      // animation-name: fadeAnimation;
+      // animation-duration: 1.5s;
+      // animation-timing-function: ease-in;
+    }
+
+    & .tech-main-details {
+      @include flexCenter(row);
+      color: $white-color;
+
+      & .tech-details-indices {
+        @include flexCenter(column);
+        & .details-index {
+          font-size: map-get($font-sizes, sub-heading-1);
+          color: $white-color;
+          background: none;
+          border: 1.5px solid $fog-color;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          cursor: pointer;
+
+          &.active-tech-btn {
+            color: $dark-color;
+            background: $white-color;
+            border: none;
+          }
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      & .tech-details-contents {
+        @include flexCenter(column);
+        align-items: flex-start;
+        margin: 0 40px;
+        width: 500px;
+        & #terminology {
+          font-size: map-get($font-sizes, nav-texts);
+          letter-spacing: 2.36px;
+        }
+        & #vessel {
+          @include mainFont;
+          font-size: 56px;
+          margin: 20px 0px 30px;
+        }
+        & #tech-main-content {
+          font-size: map-get($font-sizes, content-texts);
+          width: 90%;
+        }
+      }
+    }
+
+    & .tech-img {
+      width: 400px;
+      height: 400px;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.tech-details-contents,
+.tech-img {
+  @include keyframes(fadeAnimation) {
+    from {
+      opacity: 0.4;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @include animate(fadeAnimation, 1.5s, ease-in-out);
+}

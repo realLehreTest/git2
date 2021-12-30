@@ -1,0 +1,649 @@
+@include low-res-laptops-tablets {
+  .header {
+    height: 101px;
+  }
+  .header_main {
+    padding-top: 0px;
+    padding-left: 20px;
+
+    &::after {
+      display: none;
+    }
+    & .header_logo {
+      width: 30px;
+    }
+
+    & .header_links {
+      & ul {
+        padding: 0px 30px;
+
+        & .nav-item:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        & .nav-item {
+          padding: 20px 0px;
+
+          & a {
+            font-size: 14px;
+            letter-spacing: 2.37px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  .main-area {
+    background: url("/dist/img/home/background-home-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .main {
+    @include flexCenter(column);
+    justify-content: center;
+
+    & .main_left {
+      padding-left: 0px;
+      margin-bottom: 50px;
+      @include flexCenter(column);
+      text-align: center;
+    }
+
+    .main_right {
+      padding-right: 0px;
+
+      .explore {
+        line-height: 120px;
+      }
+
+      & .explore-glow {
+        left: 58px;
+      }
+    }
+  }
+
+  .destination {
+    padding-top: 140px;
+    background: url("/dist/img/destination/background-destination-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .destination-container {
+    & .destination-subheading {
+      font-size: 20px;
+      margin-left: 50px;
+    }
+
+    & .destination-main {
+      @include flexCenter(column);
+      text-align: center;
+      width: 80%;
+      padding-bottom: 30px;
+      display: none;
+
+      & .destination-main-contents {
+        max-width: 100%;
+        margin-left: 0px;
+
+        & .dest-btns {
+          display: inline-block;
+          margin-top: 50px;
+        }
+
+        & .destination-details {
+          & .planet-name {
+            font-size: map-get($font-sizes, mobile-heading);
+            margin: 25px 0;
+          }
+
+          & .planet-details {
+            font-size: map-get($font-sizes, mobile-sub-heading);
+          }
+        }
+
+        & .destination-numbers {
+          margin: 0 auto;
+          margin-top: 30px;
+          max-width: 70%;
+        }
+      }
+    }
+  }
+
+  .crew {
+    background: url("/dist/img/crew/background-crew-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    padding-top: 140px;
+  }
+
+  .crew-sub-heading {
+    margin-left: 40px;
+    & p {
+      font-size: 20px;
+    }
+  }
+
+  .crew-container {
+    & .crew-main {
+      @include flexCenter(column);
+      text-align: center;
+      margin-top: 50px;
+
+      & .crew-main-details {
+        .crew-rank {
+          font-size: 24px;
+        }
+        .crew-name {
+          font-size: 40px;
+          margin: 5px 0px 20px;
+        }
+        .crew-about {
+          font-size: 16px;
+          max-width: 650px;
+        }
+      }
+
+      & .cmd3 {
+        margin-top: 35px;
+        transform: translateY(-65px);
+      }
+      & .cmd4 {
+        margin-top: 65px;
+        transform: translateY(-100px);
+      }
+
+      & .crew-img {
+        width: 350px;
+        margin-top: 100px;
+      }
+      & .img3 {
+        margin-top: 20px;
+      }
+      & .img4 {
+        margin-top: -20px;
+      }
+    }
+
+    .crew-dots {
+      bottom: 65%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .technology {
+    background: url("/dist/img/technology/background-technology-tablet.jpg");
+    padding-top: 140px;
+  }
+
+  .technology-container {
+    padding-left: 0;
+    & .tech-sub-heading {
+      margin-left: 40px;
+      & p {
+        font-size: 20px;
+      }
+    }
+
+    & .tech-main {
+      @include flexCenter(column-reverse);
+      margin-top: 50px;
+      display: none;
+      &.active-tech-main {
+        @include flexCenter(column-reverse);
+      }
+
+      & .tech-main-details {
+        @include flexCenter(column);
+        margin-top: 50px;
+
+        & .tech-details-indices {
+          @include flexCenter(row);
+          & .details-index {
+            font-size: 24px;
+            &:not(:last-child) {
+              margin-bottom: 0px;
+            }
+            &:nth-child(2) {
+              margin: 0 10px;
+            }
+          }
+        }
+
+        & .tech-details-contents {
+          @include flexCenter(column);
+          align-items: center;
+          text-align: center;
+          margin: 0 0;
+          width: 458px;
+          & #terminology {
+            margin-top: 50px;
+          }
+          & #vessel {
+            font-size: 40px;
+            margin: 20px 0px 30px;
+          }
+          & #tech-main-content {
+            font-size: map-get($font-sizes, nav-texts);
+            width: 100%;
+          }
+        }
+      }
+
+      & .tech-img {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include tablets {
+  .nav-index {
+    display: none;
+  }
+}
+
+@include large-smartphones {
+  .header {
+    @include flexCenter(row);
+    padding: 30px 0px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+  }
+  .header_main {
+    .header_logo {
+      margin-top: 0px;
+    }
+    .menu-btn {
+      display: initial;
+    }
+    & .header_links {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      transform: translateX(100%);
+      z-index: 5;
+      &.open {
+        z-index: 10;
+        transform: translateX(0);
+        @include transition-ease;
+      }
+
+      & ul {
+        position: relative;
+        @include flexCenter(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 75vw;
+        height: 100vh;
+        padding: 0px 0px;
+        background: none;
+        z-index: 3;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: rgba($dark-color, 0.1);
+          backdrop-filter: blur(50px);
+          transition-delay: 5s;
+          z-index: 5;
+        }
+
+        & .nav-item:not(:last-child) {
+          margin-right: 0px;
+          margin-bottom: 40px;
+        }
+
+        & .nav-item:first-child {
+          margin-top: 100px;
+        }
+
+        & .nav-item {
+          padding: 0px 0px;
+          padding-left: 50px;
+          width: 100%;
+          position: relative;
+          z-index: 6;
+          transform: translateX(100%);
+
+          &.open {
+            transform: translateX(0);
+            @include transition-ease;
+          }
+
+          &:hover ::after {
+            width: 5px;
+            height: 100%;
+            bottom: 0;
+            left: 99%;
+          }
+
+          & a {
+            font-size: 14px;
+            letter-spacing: 2.37px;
+            padding: 0px;
+
+            & .nav-index {
+              display: initial;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        & .nav-item.active {
+          border-bottom: none;
+          border-right: 4px solid $white-color;
+          padding-top: 0px;
+        }
+
+        & .active:hover ::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .nav-item:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.15s;
+    }
+  }
+
+  .main-area {
+    background: url("/dist/img/home/background-home-mobile.jpg");
+    background-size: cover;
+    height: 100%;
+    padding-top: 120px;
+  }
+  .main {
+    @include flexCenter(column);
+    justify-content: center;
+    padding-bottom: 20px;
+
+    & .main_left {
+      padding-left: 0px;
+      margin-bottom: 50px;
+      @include flexCenter(column);
+      text-align: center;
+
+      & .sub-heading {
+        font-size: map-get($font-sizes, mobile-sub-heading);
+      }
+
+      & .heading {
+        font-size: map-get($font-sizes, mobile-heading);
+      }
+
+      & .content {
+        font-size: map-get($font-sizes, mobile-content-texts);
+        width: 90%;
+      }
+    }
+
+    .main_right {
+      padding-right: 0px;
+
+      .explore {
+        line-height: 120px;
+      }
+
+      & .explore-glow {
+        left: 58px;
+      }
+    }
+  }
+
+  .destination {
+    padding-top: 120px;
+    background: url("/dist/img/destination/background-destination-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .destination-container {
+    text-align: center;
+    & .destination-subheading {
+      font-size: 16px;
+      margin-left: 0px;
+    }
+    & .destination-main {
+      & .destination-img {
+        width: 300px;
+
+        & img {
+          width: 100%;
+        }
+      }
+      & .destination-main-contents {
+        & .destination-details {
+          & .planet-name {
+            font-size: 56px;
+            margin: 25px 0;
+          }
+
+          & .planet-details {
+            font-size: map-get($font-sizes, mobile-content-texts);
+          }
+        }
+
+        & .destination-numbers {
+          @include flexCenter(column);
+
+          & .dest-number:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .crew {
+    background: url("/dist/img/crew/background-crew-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    padding-top: 120px;
+    // padding-bottom: 50px;
+  }
+
+  .crew-sub-heading {
+    margin-left: 0px;
+    text-align: center;
+    & p {
+      font-size: 16px;
+    }
+  }
+
+  .crew-container {
+    & .crew-main {
+      @include flexCenter(column-reverse);
+      text-align: center;
+      margin-top: 50px;
+      padding-bottom: 50px;
+
+      & .crew-main-details {
+        margin-top: 80px;
+        .crew-rank {
+          font-size: 16px;
+        }
+        .crew-name {
+          font-size: 24px;
+          margin: 5px 0px 20px;
+        }
+        .crew-about {
+          font-size: 14px;
+          max-width: 100%;
+        }
+      }
+
+      & .cmd1 {
+        transform: translateY(-5px);
+      }
+      & .cmd2 {
+        transform: translateY(7px);
+        padding-bottom: 10px;
+      }
+      & .cmd3 {
+        transform: translateY(55px);
+        padding-bottom: 40px;
+      }
+      & .cmd4 {
+        transform: translateY(65px);
+        padding-bottom: 40px;
+      }
+
+      & .crew-img {
+        position: relative;
+        width: 100%;
+        // height: 223px;
+        margin-top: 0px;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background: rgba($fog-color, 0.3);
+          bottom: 3px;
+          left: 0;
+        }
+        img {
+          width: 70%;
+        }
+      }
+
+      & .img1 {
+        transform: translateY(-10px);
+      }
+      & .img2 {
+        transform: translateY(8px);
+      }
+      & .img3 {
+        transform: translateY(50px);
+      }
+      & .img4 {
+        transform: translateY(65px);
+      }
+    }
+
+    .crew-dots {
+      bottom: 30%;
+    }
+  }
+
+  .technology {
+    background: url("/dist/img/technology/background-technology-mobile.jpg");
+    padding-top: 120px;
+  }
+
+  .technology-container {
+    padding-left: 0;
+    text-align: center;
+    & .tech-sub-heading {
+      margin-left: 0px;
+      // text-align: center;
+      & p {
+        font-size: map-get($font-sizes, mobile-sub-heading);
+      }
+    }
+
+    & .tech-main {
+      @include flexCenter(column-reverse);
+      margin-top: 50px;
+      display: none;
+      &.active-tech-main {
+        @include flexCenter(column-reverse);
+      }
+
+      & .tech-main-details {
+        @include flexCenter(column);
+        margin-top: 50px;
+
+        & .tech-details-indices {
+          @include flexCenter(row);
+          & .details-index {
+            font-size: map-get($font-sizes, mobile-sub-heading);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            &:not(:last-child) {
+              margin-bottom: 0px;
+            }
+            &:nth-child(2) {
+              margin: 0 10px;
+            }
+          }
+        }
+
+        & .tech-details-contents {
+          @include flexCenter(column);
+          align-items: center;
+          text-align: center;
+          margin: 0 0;
+          width: 458px;
+          & #terminology {
+            font-size: 14px;
+            margin-top: 30px;
+          }
+          & #vessel {
+            font-size: 30px;
+            margin: 20px 0px 30px;
+          }
+          & #tech-main-content {
+            font-size: map-get($font-sizes, mobile-content-texts);
+            width: 80%;
+          }
+        }
+      }
+
+      & .tech-img {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include small-smartphones {
+  .crew {
+    height: 100%;
+    padding-top: 120px;
+  }
+
+  .crew-container {
+    .crew-dots {
+      bottom: 35%;
+    }
+  }
+}

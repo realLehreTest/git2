@@ -1,0 +1,137 @@
+.crew {
+  background: url("/dist/img/crew/background-crew-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 170px;
+  width: 100%;
+  min-height: 100%;
+  // position: relative;
+}
+
+.crew-sub-heading {
+  margin-left: 100px;
+  & p {
+    color: $white-color;
+    font-size: map-get($font-sizes, sub-heading-1);
+    letter-spacing: 4.72px;
+
+    & #crew-page-index {
+      color: $fog-color;
+      margin-right: 15px;
+    }
+  }
+}
+
+.crew-container {
+  max-width: 1100px;
+  margin: auto;
+  @include secondaryFont;
+  color: $white-color;
+  padding: 0 30px;
+  @include flexCenter(row);
+  overflow: hidden;
+  position: relative;
+
+  & .crew-main {
+    @include flexCenter(row);
+    display: none;
+    width: 100%;
+    &.animation {
+      animation-name: slideAnimation;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in;
+    }
+
+    & .crew-main-details {
+      .crew-rank {
+        @include mainFont;
+        font-size: map-get($font-sizes, heading-4);
+        color: $fog-color;
+      }
+      .crew-name {
+        @include mainFont;
+        font-size: 56px;
+        margin: 10px 0px 40px;
+      }
+      .crew-about {
+        font-size: map-get($font-sizes, content-texts);
+        line-height: 1.5;
+        max-width: 450px;
+      }
+    }
+
+    & .crew-img {
+      width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .crew-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+
+    & .dot {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: rgba($fog-color, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.7s ease-in-out;
+      &:hover {
+        background-color: rgba($white-color, 0.7);
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &.active {
+        background-color: $white-color;
+      }
+    }
+  }
+}
+
+@keyframes slideAnimation {
+  from {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// .crew-dots {
+//   position: absolute;
+//   bottom: 5%;
+//   left: 9%;
+
+//   & .dot {
+//     display: inline-block;
+//     width: 15px;
+//     height: 15px;
+//     background: rgba($fog-color, 0.3);
+//     border-radius: 50%;
+//     cursor: pointer;
+//     transition: background-color 0.7s ease-in-out;
+//     &:hover {
+//       background-color: rgba($white-color, 0.7);
+//     }
+
+//     &:not(:last-child) {
+//       margin-right: 10px;
+//     }
+
+//     &.active {
+//       background-color: $white-color;
+//     }
+//   }
+// }

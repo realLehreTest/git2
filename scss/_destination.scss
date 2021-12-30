@@ -1,0 +1,128 @@
+.destination {
+  padding-top: 170px;
+  width: 100%;
+  min-height: 100%;
+  background: url("/dist/img/destination/background-destination-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.destination-container {
+  margin: 0 auto;
+  color: $white-color;
+  @include secondaryFont;
+
+  & .destination-subheading {
+    font-size: map-get($font-sizes, sub-heading-1);
+    margin-left: 100px;
+
+    & .page-index {
+      color: $fog-color;
+      margin-right: 15px;
+    }
+  }
+
+  & .destination-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 950px;
+    padding: 0 20px 50px 20px;
+    display: none;
+
+    &.active-main {
+      display: flex;
+    }
+
+    & .destination-img {
+      width: 350px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .destination-main-contents {
+      max-width: 445px;
+      margin-left: 30px;
+
+      & .dest-btns {
+        display: flex;
+        align-items: center;
+
+        & .dest-btn {
+          background: none;
+          border: none;
+          font-size: map-get($font-sizes, nav-texts);
+          color: $white-color;
+          cursor: pointer;
+          padding-bottom: 8px;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+
+          &.active {
+            border-bottom: 2px solid $white-color;
+          }
+        }
+      }
+
+      & .destination-details {
+        border-bottom: 1px solid $fog-color;
+        padding-bottom: 50px;
+
+        & .planet-name {
+          font-size: map-get($font-sizes, heading-2);
+          @include mainFont;
+          margin: 20px 0;
+        }
+
+        & .planet-details {
+          @include secondaryFont;
+          font-size: map-get($font-sizes, content-texts);
+          line-height: 1.4;
+        }
+      }
+
+      & .destination-numbers {
+        margin-top: 30px;
+        @include flexCenter(row);
+        // width: 80%;
+
+        & .dest-number {
+          & .sub {
+            font-size: map-get($font-sizes, sub-heading-2);
+            color: $fog-color;
+            margin-bottom: 5px;
+          }
+
+          & .main-number {
+            @include mainFont;
+            font-size: map-get($font-sizes, sub-heading-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.destination-img,
+.destination-details,
+.destination-numbers {
+  @include keyframes(fadeAnimation) {
+    from {
+      opacity: 0.4;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @include animate(fadeAnimation, 1.5s, ease-in-out);
+}
